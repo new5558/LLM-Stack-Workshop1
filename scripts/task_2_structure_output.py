@@ -7,7 +7,7 @@ import json
 OUTPUT_FILE = "output.jsonl"
 DATASET_FILE = "sample/sample_thaisum.json"
 client = OpenAI(
-    api_key="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",
+    api_key=...,
     base_url="https://openrouter.ai/api/v1",
 )
 
