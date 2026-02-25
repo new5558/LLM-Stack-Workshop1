@@ -14,27 +14,12 @@ client = OpenAI(
 
 # sentiment, summary, people name, Relation Extraction, Event Extraction
 class ExtractedData(BaseModel):
-    sentiment: str
-    summary: str
-    people_name: list[str]
-    relation_extraction: list[tuple[str, str, str]]
-    event_extraction: list[tuple[str, str, str]]
+    pass
 
 
 schema = json.dumps(ExtractedData.model_json_schema())
 
-system_prompt = f"""
-You are an expert information extraction system. Analyze the provided text and extract structured data.
-Your output must be a valid JSON object that follows this schema:
-{schema}
-
-Ensure that:
-- 'sentiment' is the overall tone of the text.
-- 'summary' is a concise summary.
-- 'people_name' is a list of names mentioned.
-- 'relation_extraction' is a list of tuples (subject, relation, object).
-- 'event_extraction' is a list of tuples (event, time, location).
-"""
+system_prompt = ...
 
 with open(DATASET_FILE, "r", encoding="utf-8") as f:
     dataset = json.load(f)
