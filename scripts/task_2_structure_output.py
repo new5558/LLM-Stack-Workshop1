@@ -41,7 +41,7 @@ with open(DATASET_FILE, "r", encoding="utf-8") as f:
 
 for sample in tqdm.tqdm(dataset):
     response = client.chat.completions.create(
-        model="qwen/qwen3-235b-a22b-2507",
+        model="openrouter/free",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": sample},
