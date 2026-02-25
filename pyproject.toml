@@ -1,0 +1,20 @@
+[project]
+name = "llm-stack-workshop-1"
+version = "0.1.0"
+description = "Workshop 1: Build LLM-powered Information Extraction Pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "streamlit",
+    "pydantic",
+    "google-generativeai",
+    "openai",
+    "python-dotenv",
+    "requests",
+    "datasets",
+]
+
+[tool.uv]
+managed = true
