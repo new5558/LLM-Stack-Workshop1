@@ -11,6 +11,10 @@ client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
 )
 
+### Task
+# - Extract infomration from News (thaisum.json) using LLM "Tool calling" approach
+# - Save each result into output.jsonl
+
 
 # sentiment, summary, people name, Relation Extraction, Event Extraction
 class ExtractedData(BaseModel):
