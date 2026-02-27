@@ -7,7 +7,6 @@ from typing import Tuple
 # Initialize your LLM client here (e.g., OpenAI, Google Gemini, etc.)
 # =====================================================
 
-
 # ====== LLM CALL FUNCTION ======
 def get_response(messages) -> Tuple[str, str]:
     return "Return response content", "Return reasoning content"
@@ -19,7 +18,7 @@ st.set_page_config(page_title="LLM Chatbot")
 st.title("🤖 LLM Chatbot")
 
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "system", "content": "You are a helpful assistant. Reasoning effort: high"}]
+    st.session_state.messages = [{"role": "system", "content": "You are a helpful assistant."}]
 
 # Display previous messages
 for msg in st.session_state.messages:
