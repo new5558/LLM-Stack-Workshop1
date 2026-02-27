@@ -37,5 +37,5 @@ for sample in tqdm.tqdm(dataset):
     content = response.choices[0].message.content
 
     extracted_data = json.loads(content)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
         f.write(json.dumps(extracted_data, ensure_ascii=False) + "\n")
