@@ -19,6 +19,7 @@ class ExtractedData(BaseModel):
 
 schema = json.dumps(ExtractedData.model_json_schema())
 
+tools = ...
 system_prompt = ...
 
 with open(DATASET_FILE, "r", encoding="utf-8") as f:
