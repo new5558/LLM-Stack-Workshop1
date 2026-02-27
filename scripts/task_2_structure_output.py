@@ -40,6 +40,7 @@ for sample in tqdm.tqdm(dataset):
     )
 
     meesage = response.choices[0].message
+    content = ...
 
     extracted_data = json.loads(content)
     with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
