@@ -39,7 +39,7 @@ for sample in tqdm.tqdm(dataset):
         temperature=0,
     )
 
-    content = response.choices[0].message.content
+    meesage = response.choices[0].message
 
     extracted_data = json.loads(content)
     with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
